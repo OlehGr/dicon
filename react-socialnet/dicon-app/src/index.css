@@ -1,0 +1,320 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 0;
+  margin: 0;
+}
+
+p, h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.page {
+  box-sizing: border-box;
+  min-height: 100vh;
+  
+
+  display: grid;
+  grid-template: 'header header'100px 'nav wind'1fr / 300px 1fr;
+  grid-gap: 10px;
+
+  background-color: rgba(0, 91, 148, .3);
+}
+
+.header {
+  position: relative;
+  grid-area: header;
+
+}
+
+.header__wrapper {
+  position: fixed;
+  z-index: 1;
+
+  background-color: #005B94;
+
+  height: 100px;
+  width: 100vw;
+}
+
+.nav {
+  box-sizing: border-box;
+  grid-area: nav;
+
+  padding: 0 0 0 10px;
+
+  position: relative;
+}
+
+.nav__wrapper {
+  width: 290px;
+
+  position: fixed;
+  z-index: 1;
+}
+
+.nav__btn {
+  display: block;
+  padding: 7px 0;
+
+  border-top: 2px solid rgba(0, 0, 0, 0);
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+
+  transition: all .1s ;
+
+  font-size: 32px;
+}
+
+.nav__btn:hover {
+  border-top: 2px solid rgba(0, 0, 0, 1);
+  border-bottom: 2px solid rgba(0, 0, 0, 1);
+}
+
+.clicked {
+  border-top: 2px solid rgba(0, 0, 0, 1);
+  border-bottom: 2px solid rgba(0, 0, 0, 1);
+}
+
+
+.wind {
+  grid-area: wind;
+
+  margin-right: 10px;
+
+  background-color: #FDF8ED;
+}
+
+.wall {
+  width: 100%;
+  height: 200px;
+
+  background-size: cover;
+  background-position: center center;
+}
+
+.profile {
+  margin-top: 20px;
+  margin-bottom: 100px;
+
+  display: flex;
+}
+
+.profile__desc {
+  font-size: 24px;
+
+  margin-left: 10px;
+}
+
+.profile__name {
+  margin-bottom: 10px;
+}
+
+.profile__date {
+  margin-bottom: 10px;
+}
+
+.profile__homeland {
+  margin-bottom: 10px;
+}
+
+.profile__edu {
+  margin-bottom: 10px;
+}
+
+.profile__status {
+  font-size: 24px;
+}
+
+
+.profile__ava {
+  width: 120px;
+  height: 170px;
+}
+
+
+/* Посты */
+
+
+.posts {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 20px;
+  
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+
+.posts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+.posts-list__item {
+  box-sizing: border-box;
+  min-height: 100px;
+  width: 70vw;
+
+  padding: 15px;
+  margin: 20px 0;
+
+  font-size: 28px;
+
+  box-shadow: -8px 8px 14px 2px rgba(0, 0, 0, 0.2);
+  border-right: 2px solid #005B94;
+}
+
+.post-creating {
+  min-height: 200px;
+
+
+  display: flex;
+  align-items: center;
+  
+}
+
+.post-creating__btn {
+  margin-left: 20px;
+  padding: 10px 20px;
+
+  background-color: #005B94;
+  border-right: 2px solid #005B94;
+
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.post-creating__btn:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: #005B94;
+}
+  
+
+
+.post-creating__input {
+  width: 60vw;
+  height: 100px;
+}
+
+/* Пользователи */
+
+
+
+.users-list__item {
+  width: 70vw;
+  padding: 10px 0;
+  margin-bottom: 20px;
+
+  border-top: 2px solid rgba(0, 0, 0, 1);
+  border-bottom: 2px solid rgba(0, 0, 0, 1);
+}
+
+.user {
+  width: 100%;
+
+  display: flex;
+}
+
+.user__face {
+  padding: 10px;
+
+  border-right: 2px solid rgba(0, 0, 0, 1);
+}
+
+.user__ava  {
+  object-fit: contain;
+  width: 100px;
+  height: 120px;
+
+  margin-bottom: 10px;
+}
+
+.user__follow {
+  letter-spacing: 1px;
+  font-size: 16px;
+  
+  background-color: #005B94;
+  color: #fff;
+
+  padding: 10px 0;
+  width: 100%;
+}
+
+.user__info {
+  flex-grow: 1;
+
+  position: relative;
+
+  font-size: 18px;
+}
+
+.user__name {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  font-size: 38px;
+}
+
+.user__status {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+
+  font-size: 21px;
+}
+
+.user__homeland {
+  max-width: 100px;
+
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  font-size: 28px;
+}
+
+
+
+
+
+
